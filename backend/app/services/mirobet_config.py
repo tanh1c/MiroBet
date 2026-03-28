@@ -4,8 +4,8 @@ MiroBet configuration
 import os
 from dotenv import load_dotenv
 
-# Load .env from MiroFish root
-project_root_env = os.path.join(os.path.dirname(__file__), '../../.env')
+# Load .env from project root
+project_root_env = os.path.join(os.path.dirname(__file__), '../../../.env')
 if os.path.exists(project_root_env):
     load_dotenv(project_root_env, override=True)
 
@@ -27,7 +27,7 @@ class MiroBetConfig:
     BACKTEST_SEASONS = 3
 
     # Data paths
-    DATA_DIR = os.path.join(os.path.dirname(__file__), '../../data')
+    DATA_DIR = os.path.join(os.path.dirname(__file__), '../../../data')
     NBA_STATS_DIR = os.path.join(DATA_DIR, 'nba_stats')
     PREDICTIONS_DIR = os.path.join(DATA_DIR, 'predictions')
     POLYMARKET_CACHE_DIR = os.path.join(DATA_DIR, 'polymarket_cache')
