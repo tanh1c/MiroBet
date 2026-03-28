@@ -44,7 +44,7 @@ NBADataLoader = _nba_mod.NBADataLoader
 def test_loader_initializes():
     """Test loader initializes with data directory"""
     loader = NBADataLoader()
-    assert 'nba_stats' in loader.data_dir
+    assert 'nba_stats' in loader._db_path
     assert NBADataLoader.SEASONS == ['2022-23', '2023-24', '2024-25']
 
 
@@ -60,10 +60,10 @@ def test_get_player_vector_defaults():
     with tempfile.TemporaryDirectory() as tmpdir:
         loader = NBADataLoader(data_dir=tmpdir)
         vector = loader.get_player_vector("Unknown Player", "2023-24")
-        assert vector['pts'] == 0.0
-        assert vector['reb'] == 0.0
+        assert vector['points'] == 0.0
+        assert vector['rebounds'] == 0.0
         assert vector['efg_pct'] == 0.0
-        assert 'ast' in vector
+        assert 'assists' in vector
         assert 'usage_rate' in vector
 
 
