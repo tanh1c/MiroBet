@@ -5,6 +5,7 @@ import SimulationView from '../views/SimulationView.vue'
 import SimulationRunView from '../views/SimulationRunView.vue'
 import ReportView from '../views/ReportView.vue'
 import InteractionView from '../views/InteractionView.vue'
+import MiroBetView from '../views/MiroBetView.vue'
 
 const routes = [
   {
@@ -41,6 +42,12 @@ const routes = [
     name: 'Interaction',
     component: InteractionView,
     props: true
+  },
+  {
+    path: '/mirobet',
+    name: 'MiroBet',
+    component: MiroBetView,
+    props: false
   }
 ]
 

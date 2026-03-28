@@ -4,6 +4,9 @@
     <nav class="navbar">
       <div class="nav-brand">MIROFISH</div>
       <div class="nav-links">
+        <router-link to="/mirobet" class="mirobet-link">
+          🎯 MiroBet
+        </router-link>
         <a href="https://github.com/666ghj/MiroFish" target="_blank" class="github-link">
           访问我们的Github主页 <span class="arrow">↗</span>
         </a>
@@ -368,6 +371,23 @@ const startSimulation = () => {
 .github-link:hover {
   opacity: 0.8;
 }
+
+.mirobet-link {
+  color: #4ade80;
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.2s;
+  margin-right: 16px;
+  border: 1px solid #4ade80;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+.mirobet-link:hover { opacity: 0.8; }
 
 .arrow {
   font-family: sans-serif;
